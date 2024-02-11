@@ -1,0 +1,29 @@
+<div class="side-menu_wrapper">
+  @if(isTitle()){
+  <h1 [className]="isTitleStyle()? 'fadeOutAnimation': ''">Manoj HT</h1>
+  }
+  <div class="selected_nav-background" id="selectedBackground"></div>
+  <ul>
+    @for(item of navList; track item){
+    <li (click)="navClicked(item)" [title]="item.title" [id]="item.routeLink">{{item.name}}</li>
+    }
+  </ul>
+  <div class="theme_selection">
+    <div class="div1">
+      <!-- <div class="wrapper">
+        <div class="toggle">
+          <input class="toggle-input" type="checkbox" />
+          <div class="toggle-bg"></div>
+          <div class="toggle-switch">
+            <div class="toggle-switch-figure"></div>
+            <div class="toggle-switch-figureAlt"></div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+    <div class="div2"></div>
+    @for(name of colorNames; track name){
+    <div (click)="changeTheme(name)" [class]="'div'+($index+3)"></div>
+    }
+  </div>
+</div>

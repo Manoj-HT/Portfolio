@@ -1,0 +1,13 @@
+<div class="nav">
+  @if(isTitle()){
+    <h1 [className]="isTitleStyle()? 'fadeOutAnimation': ''" >Manoj HT</h1>
+  }
+  <div class="hamburger-menu" (click)="setOpen()" ></div>
+  @if(isOpen()){
+    <ul>
+      @for(item of navList; track item){
+        <li (click)="navClicked(item)" >{{item.name}}</li>
+      }
+    </ul>
+  }
+</div>
