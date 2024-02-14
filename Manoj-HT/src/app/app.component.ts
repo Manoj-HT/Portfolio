@@ -35,6 +35,9 @@ export class AppComponent implements OnInit {
         if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
           this.themeChanger.setMode('dark');
         }
+        if (window.matchMedia('(prefers-color-scheme: light)').matches) {         
+          this.themeChanger.setMode('light');
+        }
         this.routeConfig()
         this.themeChanger.setInitialTheme();
       }

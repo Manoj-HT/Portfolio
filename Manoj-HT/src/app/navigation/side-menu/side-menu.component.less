@@ -4,6 +4,7 @@
   width: 100%;
   height: 100%;
   transition: background-color 0.3s;
+  overflow: hidden;
 }
 h1 {
   position: absolute;
@@ -40,7 +41,7 @@ li {
   top: 2.5rem;
   left: 2rem;
   border-radius: 100vh 0 0 100vh;
-  transition-duration: 0.5s;
+  transition: top 0.5s;
   &::before {
     position: absolute;
     top: -1rem;
@@ -63,67 +64,44 @@ li {
     border-radius: 0 10rem 0 0;
     box-shadow: 10px -10px 0 10px var(--theme-background);
   }
-  &::before, &::after{
-  transition: background-color 0.3s;
+  &::before,
+  &::after {
+    transition: background-color 0.3s;
   }
 }
-.theme_selection {
-  padding: var(--5-px);
-  background-color: rgba(0, 0, 0, 0.5);
+.theme {
   position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
   height: 2.5rem;
-  display: grid;
-  grid-template-columns: 1.5fr 0.1fr repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 5px;
-  grid-row-gap: 5px;
-  div:not(.div1, .div2) {
-    border-radius: 100vh;
+  #chevron-wrapper {
     transition-duration: 0.3s;
-    &:hover {
-      scale: 1.1;
-      cursor: pointer;
+    position: absolute;
+    right: 50%;
+    top: -40%;
+    cursor: pointer;
+  }
+}
+.scroll-up {
+  bottom: 0;
+  animation: scrollUp 0.3s ease-in-out;
+  @keyframes scrollUp {
+    from {
+      bottom: -2.5rem;
     }
-    &:active {
-      scale: 0.9;
+    to {
+      bottom: 0;
     }
   }
-  .div1 {
-    grid-area: 1 / 1 / 3 / 2;
-  }
-  .div2 {
-    grid-area: 1 / 2 / 3 / 3;
-    background-color: gray;
-    padding: 2px;
-    width: 0;
-    border-radius: 100vh;
-    opacity: 0.5;
-  }
-  .div3 {
-    grid-area: 1 / 3 / 2 / 4;
-    background-color: rgb(255, 193, 37);
-  }
-  .div4 {
-    grid-area: 1 / 4 / 2 / 5;
-    background-color: rgb(255, 134, 134);
-  }
-  .div5 {
-    grid-area: 1 / 5 / 2 / 6;
-    background-color: rgb(98, 37, 209);
-  }
-  .div6 {
-    grid-area: 2 / 3 / 3 / 4;
-    background-color: rgb(255, 190, 152);
-  }
-  .div7 {
-    grid-area: 2 / 4 / 3 / 5;
-    background-color: rgb(44, 171, 244);
-  }
-  .div8 {
-    grid-area: 2 / 5 / 3 / 6;
-    background-color: rgb(100, 214, 100);
+}
+.scroll-down {
+  bottom: -2.5rem;
+  animation: scrollDown 0.3s ease-in-out;
+  @keyframes scrollDown {
+    from {
+      bottom: 0;
+    }
+    to {
+      bottom: -2.5rem;
+    }
   }
 }

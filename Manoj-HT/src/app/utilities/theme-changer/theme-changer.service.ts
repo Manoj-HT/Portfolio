@@ -1,19 +1,37 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ThemeChangerService {
+  themeMode = signal<boolean>(false);
   setMode(mode: 'light' | 'dark') {
     const root = document.documentElement;
-    if (mode == 'dark') {
-      root.style.setProperty('--theme-background', 'black');
-      root.style.setProperty('--theme-background-inverse', 'white');
-      root.style.setProperty('--font-color', 'white');
-    } else if (mode == 'light') {
-      root.style.setProperty('--theme-background', 'white');
-      root.style.setProperty('--theme-background-inverse', 'black');
-      root.style.setProperty('--font-color', 'black');
+    const modeSet = sessionStorage.getItem('mode') as string;
+    if (modeSet == undefined) {
+      if (mode == 'dark') {
+        root.style.setProperty('--theme-background', 'black');
+        root.style.setProperty('--theme-background-inverse', 'white');
+        root.style.setProperty('--font-color', 'white');
+        this.themeMode.set(true);
+      } else if (mode == 'light') {
+        root.style.setProperty('--theme-background', 'white');
+        root.style.setProperty('--theme-background-inverse', 'black');
+        root.style.setProperty('--font-color', 'black');
+        this.themeMode.set(false);
+      }
+    } else {
+      if (modeSet == 'light') {
+        root.style.setProperty('--theme-background', 'white');
+        root.style.setProperty('--theme-background-inverse', 'black');
+        root.style.setProperty('--font-color', 'black');
+        this.themeMode.set(false);
+      } else {
+        root.style.setProperty('--theme-background', 'black');
+        root.style.setProperty('--theme-background-inverse', 'white');
+        root.style.setProperty('--font-color', 'white');
+        this.themeMode.set(true);
+      }
     }
   }
 

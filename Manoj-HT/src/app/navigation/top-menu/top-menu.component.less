@@ -7,16 +7,19 @@
   align-items: center;
   justify-content: flex-end;
   gap: var(--20-px);
+  transition: background-color 0.3s;
 }
 h1 {
   font-size: large;
 }
-ul {
+
+.navigation-list_container {
   position: absolute;
   top: 100%;
   left: 0;
   width: 100%;
   background-color: var(--theme);
+  transition: background-color 0.3s;
   animation: scrollDown 0.3s linear;
   @keyframes scrollDown {
     from{
@@ -61,4 +64,7 @@ li {
     bottom: var(--10-px);
     left: -1.9px;
   }
+}
+.theme{
+  width: 100%;
 }
