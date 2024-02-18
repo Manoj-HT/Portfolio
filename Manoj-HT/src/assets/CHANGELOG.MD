@@ -1,3 +1,7 @@
+# 0.0.4
+
+1. spa firebase setup 
+
 # 0.0.3
 
 1. firebase setup removed 

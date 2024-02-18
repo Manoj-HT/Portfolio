@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/manoj-ht/server",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.server.html"
+      }
+    ]
+  }
+}
