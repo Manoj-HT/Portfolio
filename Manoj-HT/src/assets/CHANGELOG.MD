@@ -1,3 +1,7 @@
+# 0.0.5
+
+1. deployment setup -1
+
 # 0.0.4
 
 1. spa firebase setup 
