@@ -1,3 +1,8 @@
+# 1.0.0
+
+1. Updated Resume Page
+2. Added heading, elements styles
+
 # 0.0.5
 
 1. deployment setup -1
