@@ -1,3 +1,7 @@
+# 1.0.1
+
+1. updated style for resume page
+
 # 1.0.0
 
 1. Updated Resume Page
