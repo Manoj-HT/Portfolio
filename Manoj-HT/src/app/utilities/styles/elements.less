@@ -36,9 +36,14 @@ button {
   border: 2px solid var(--theme);
   cursor: pointer;
   transition-duration: 0.3s;
-
   &:active {
     scale: 0.95;
+  }
+  @media screen and (max-width: 768px) {
+    span {
+      display: none;
+    }
+    border-color: transparent;
   }
 }
 .icon {

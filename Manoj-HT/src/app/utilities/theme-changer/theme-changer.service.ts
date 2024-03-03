@@ -13,11 +13,13 @@ export class ThemeChangerService {
         root.style.setProperty('--theme-background', 'black');
         root.style.setProperty('--theme-background-inverse', 'white');
         root.style.setProperty('--font-color', 'white');
+        root.style.setProperty('--theme-filter', 'invert(1)');
         this.themeMode.set(true);
       } else if (mode == 'light') {
         root.style.setProperty('--theme-background', 'white');
         root.style.setProperty('--theme-background-inverse', 'black');
         root.style.setProperty('--font-color', 'black');
+        root.style.setProperty('--theme-filter', 'invert(0)');
         this.themeMode.set(false);
       }
     } else {
@@ -25,11 +27,13 @@ export class ThemeChangerService {
         root.style.setProperty('--theme-background', 'white');
         root.style.setProperty('--theme-background-inverse', 'black');
         root.style.setProperty('--font-color', 'black');
+        root.style.setProperty('--theme-filter', 'invert(0)');
         this.themeMode.set(false);
       } else {
         root.style.setProperty('--theme-background', 'black');
         root.style.setProperty('--theme-background-inverse', 'white');
         root.style.setProperty('--font-color', 'white');
+        root.style.setProperty('--theme-filter', 'invert(1)');
         this.themeMode.set(true);
       }
     }

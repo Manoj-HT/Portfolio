@@ -1,3 +1,7 @@
+# 1.0.5
+
+1. updated favicon
+
 # 1.0.4
 
 1. angular core updated 17.2.3
