@@ -1,28 +1,50 @@
+.head-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .qr-code {
+    width: 8%;
+    height: fit-content;
+  }
+}
 .heading {
   text-align: left;
 }
-.resume_content {
-  margin-top: 10px;
+
+.link {
   display: flex;
-  gap: 10px;
-  @media screen and (max-width: 900px) {
-    flex-direction: column;
+  align-items: center;
+  gap: var(--10-px);
+  justify-content: flex-start;
+  width: max-content;
+}
+.resume_content {
+  * {
+    // border: 1px solid black;
+    font-size: 16px;
   }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: calc(var(--10-px) * 2);
 }
-.resume_projects,
-.resume_experience-certifications {
-  width: 100%;
+.sub-heading,
+.sub-heading-2 {
+  font-size: 24px !important;
 }
-.projects_list {
-  margin-left: var(--20-px);
+.print {
+  display: none;
+  background-color: white;
+  color: black;
+  padding: var(--20-px);
 }
-.experience_list,
-.certification_list {
-  ul {
-    list-style: none;
-  }
-}
-.job_description,
-.description {
-  margin-left: var(--20-px);
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  // .projects,
+  // .skills,
+  // .work_experience,
+  // .education {
+  //   width: 45%;
+  // }
 }

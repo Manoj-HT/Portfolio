@@ -15,3 +15,33 @@ ul {
 .mar-top-5 {
   margin-top: var(--5-px);
 }
+.mar-left-5 {
+  margin-left: var(--5-px);
+}
+.mar-left-10 {
+  margin-left: var(--10-px);
+}
+.mar-left-20 {
+  margin-left: var(--20-px);
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--10-px);
+  padding: var(--5-px);
+  background-color: transparent;
+  border-radius: var(--10-px);
+  border: 2px solid var(--theme);
+  cursor: pointer;
+  transition-duration: 0.3s;
+
+  &:active {
+    scale: 0.95;
+  }
+}
+.icon {
+  width: 20px;
+  height: 20px;
+}

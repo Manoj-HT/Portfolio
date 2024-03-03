@@ -1,3 +1,9 @@
+# 1.0.3
+
+1. resume view updated
+2. installed jsPDF [temporary]
+3. changed client_heading_pic.jpg to client-heading-pic.webp
+
 # 1.0.2
 
 1. linkedIn URL Fix
