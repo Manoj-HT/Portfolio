@@ -1,3 +1,7 @@
+# 1.0.4
+
+1. angular cli updated 17.2.2
+
 # 1.0.3
 
 1. resume view updated
