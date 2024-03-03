@@ -1,6 +1,5 @@
 import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { NavService } from '../navigation/nav-service/nav.service';
-import jsPDF from 'jspdf';
 @Component({
   selector: 'app-resume-cv',
   standalone: true,
@@ -15,18 +14,11 @@ export class ResumeCVComponent implements OnInit, OnDestroy {
   }
 
   downloadResume() {
-    let print = document.getElementById('print') as HTMLDivElement;
-    print.style.display = 'block';
-    let pdf = new jsPDF();
-    let pageWidth = pdf.internal.pageSize.width;
-    pdf.html(print, {
-      callback: (doc) => {
-        print.style.display = 'none';
-        doc.save('Manoj-HT-Resume.pdf');
-      },
-      width: pageWidth,
-      windowWidth: 1000,
-    });
+    let anchor = document.createElement('a') as HTMLAnchorElement;
+    anchor.href = 'assets/files/Manoj-HT-Resume.pdf';
+    anchor.target = '_blank';
+    anchor.click();
+    anchor.remove();
   }
 
   ngOnDestroy(): void {

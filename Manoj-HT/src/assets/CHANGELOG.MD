@@ -1,3 +1,12 @@
+# 1.0.7
+
+1. removed jspdf 
+2. added pdf resume asset
+
+# 1.0.6
+
+1. reverted 320 px grid to 500px grid in resume
+
 # 1.0.5
 
 1. updated favicon
