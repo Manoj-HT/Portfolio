@@ -1,3 +1,7 @@
+# 1.0.10
+
+1. firebase asset link changed
+
 # 1.0.9
 
 1. added storage rules

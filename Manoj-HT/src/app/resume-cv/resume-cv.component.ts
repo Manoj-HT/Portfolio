@@ -15,7 +15,7 @@ export class ResumeCVComponent implements OnInit, OnDestroy {
 
   downloadResume() {
     let anchor = document.createElement('a') as HTMLAnchorElement;
-    anchor.href = 'assets/files/Manoj-HT-Resume.pdf';
+    anchor.href = 'https://firebasestorage.googleapis.com/v0/b/manoj-ht.appspot.com/o/Manoj-HT-Resume.pdf?alt=media&token=50430a0a-d7a7-4937-a4cc-5759eb6b3c86';
     anchor.target = '_blank';
     anchor.click();
     anchor.remove();
