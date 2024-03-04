@@ -1,3 +1,7 @@
+# 1.0.8
+
+1. npm update
+
 # 1.0.7
 
 1. removed jspdf 
