@@ -1,3 +1,9 @@
+# 1.0.9
+
+1. added storage rules
+2. added storage rules to firebase.json
+3. added cdn for icons and clieant heading pic
+
 # 1.0.8
 
 1. npm update
