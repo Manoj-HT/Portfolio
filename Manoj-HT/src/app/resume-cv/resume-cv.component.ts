@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { NavService } from '../navigation/nav-service/nav.service';
+import { AssetVariablesType, AssetsManagerService } from '../utilities/assets-manager/assets-manager.service';
 @Component({
   selector: 'app-resume-cv',
   standalone: true,
@@ -13,12 +14,18 @@ export class ResumeCVComponent implements OnInit, OnDestroy {
     this.navService.setTitle(false);
   }
 
+  private assetManager = inject(AssetsManagerService);
+
   downloadResume() {
-    let anchor = document.createElement('a') as HTMLAnchorElement;
-    anchor.href = 'https://firebasestorage.googleapis.com/v0/b/manoj-ht.appspot.com/o/Manoj-HT-Resume.pdf?alt=media&token=50430a0a-d7a7-4937-a4cc-5759eb6b3c86';
-    anchor.target = '_blank';
-    anchor.click();
-    anchor.remove();
+    this.assetManager.getVariables().subscribe({
+      next:(res)=>{
+        let anchor = document.createElement('a') as HTMLAnchorElement;
+        anchor.href = res.resumeLink
+        anchor.target = '_blank';
+        anchor.click();
+        anchor.remove();
+      }
+    })
   }
 
   ngOnDestroy(): void {

@@ -1,3 +1,7 @@
+# 1.0.11
+
+1. added variables.json for links
+
 # 1.0.10
 
 1. firebase asset link changed
