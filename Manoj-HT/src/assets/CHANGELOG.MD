@@ -1,3 +1,7 @@
+# 1.0.13
+
+1. added icons in contact page with circle
+
 # 1.0.12
 
 1. added social icons

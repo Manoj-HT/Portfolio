@@ -23,60 +23,31 @@ import { Component } from '@angular/core';
           <feGaussianBlur stdDeviation="3.4858133" />
         </filter>
       </defs>
-      <g transform="translate(-277.12 89.525)">
+      <g transform="translate(-277.12 183.75)">
         <path
-          d="m279.4-45.869c0-31.029 10.343-41.372 41.372-41.372s41.372 10.343 41.372 41.372c0 31.029-10.343 41.372-41.372 41.372s-41.372-10.343-41.372-41.372"
-          style="fill:#fca;stroke-width:.51715"
+          d="m279.4-140.09c0-31.029 10.343-41.372 41.372-41.372s41.372 10.343 41.372 41.372c0 31.029-10.343 41.372-41.372 41.372s-41.372-10.343-41.372-41.372"
+          style="fill:#007bb5;stroke-width:.51715"
         />
-        <circle
-          cx="320.7"
-          cy="-45.869"
-          r="25.189"
-          style="fill:#1a1a1a;filter:url(#a);mix-blend-mode:normal;opacity:.55747;paint-order:fill markers stroke"
-        />
-        <circle
-          cx="320.7"
-          cy="-45.869"
-          r="25.189"
-          style="fill:#fca;paint-order:fill markers stroke"
-        />
-        <g transform="matrix(.37926 0 0 .37926 267.14 44.323)">
-          <g transform="translate(-29.236)">
+        <g transform="translate(-99,-94.222)">
+          <g transform="translate(198)">
             <circle
-              cx="140.93"
-              cy="-258.05"
-              r="7.5809"
-              style="fill:#c5221f;paint-order:fill markers stroke"
+              cx="221.7"
+              cy="-45.869"
+              r="25.189"
+              style="fill:#1a1a1a;filter:url(#a);mix-blend-mode:normal;opacity:.72354;paint-order:fill markers stroke"
             />
-            <path
-              d="m150.24-238.96v28.975h-10.218c-4.4417 0-6.6668-2.0024-6.6668-5.617v-36.021c0-0.0483 16.885 12.663 16.885 12.663z"
-              style="fill:#4285f4;paint-order:fill markers stroke"
-            />
-            <path
-              d="m133.35-251.62v-6.4296l12.405-5.8477 4.4792 3.3259v21.615z"
-              style="fill:#c5221f;paint-order:fill markers stroke"
+            <circle
+              cx="221.7"
+              cy="-45.869"
+              r="25.189"
+              style="fill:#007bb5;paint-order:fill markers stroke"
             />
           </g>
           <path
-            d="m161.43-238.96 3e-5 -21.615-20.214 15.32-20.214-15.32 3e-5 21.615 20.214 15.32z"
-            style="fill:#ea4335;paint-order:fill markers stroke"
+            d="m412.02-34.647v-18.481h-4.6677v18.481zm-2.3149-26.185c-1.5559 0-2.6185 1.1005-2.6185 2.5426 0 1.3662 1.0246 2.5046 2.5805 2.5046 1.6318 0 2.6564-1.1385 2.6564-2.5046-0.0379-1.4421-1.0246-2.5426-2.6185-2.5426zm7.3622 26.185h4.6677v-10.891c0-0.53129 0.0759-1.1005 0.22769-1.48 0.49334-1.4041 1.7836-2.7323 3.6431-2.7323 2.5426 0 3.5293 2.0113 3.5293 4.6677v10.436h4.6677v-10.967c0-5.8442-3.3395-7.9314-6.5652-7.9314-3.0739 0-5.0852 1.7457-5.9201 3.1877h-0.11385l-0.2277-2.7703h-4.0606c0.0759 1.5939 0.1518 3.3775 0.1518 5.5026z"
+            style="fill:#fff;paint-order:fill markers stroke;stroke-linecap:round;stroke-linejoin:bevel;stroke-width:3.5857"
+            aria-label="in"
           />
-          <g transform="matrix(-1 0 0 1 311.67 0)">
-            <circle
-              cx="140.93"
-              cy="-258.05"
-              r="7.5809"
-              style="fill:#fbbc04;paint-order:fill markers stroke"
-            />
-            <path
-              d="m150.24-238.96v28.975h-10.218c-4.4417 0-6.6668-2.0024-6.6668-5.617v-36.021c0-0.0483 16.885 12.663 16.885 12.663z"
-              style="fill:#34a853;paint-order:fill markers stroke"
-            />
-            <path
-              d="m133.35-251.62v-6.4296l12.405-5.8477 4.4792 3.3259v21.615z"
-              style="fill:#fbbc04;paint-order:fill markers stroke"
-            />
-          </g>
         </g>
       </g>
     </svg>
