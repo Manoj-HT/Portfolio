@@ -1,9 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { IconActionType } from './icons';
 
 @Component({
   standalone: true,
   selector: 'whatsapp-icon, [whatsapp-icon]',
-  template: ` <div class="whatsapp-container icon-container">
+  template: ` <div
+    class="whatsapp-container icon-container"
+    (mouseenter)="handleIconMouseEnter()"
+    (mouseleave)="handleIconMouseLeave()"
+    (click)="handleIconClick()"
+  >
     <svg
       width="90mm"
       height="90mm"
@@ -53,4 +59,21 @@ import { Component } from '@angular/core';
   </div>`,
   styleUrl: './icon.styles.less',
 })
-export class WhatsAppIcon {}
+export class WhatsAppIcon {
+  @Output() iconClicked = new EventEmitter<IconActionType>();
+  @Output() iconEnter = new EventEmitter<IconActionType>();
+  @Output() iconLeave = new EventEmitter<IconActionType>();
+  iconAction: IconActionType = {
+    name: 'whatsapp',
+    action: 'click',
+  };
+  handleIconClick() {
+    this.iconClicked.emit({ ...this.iconAction, action: 'click' });
+  }
+  handleIconMouseEnter() {
+    this.iconEnter.emit({ ...this.iconAction, action: 'enter' });
+  }
+  handleIconMouseLeave() {
+    this.iconLeave.emit({ ...this.iconAction, action: 'leave' });
+  }
+}

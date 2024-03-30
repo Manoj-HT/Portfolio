@@ -1,3 +1,7 @@
+# 1.0.14
+
+1. added actions on icons
+
 # 1.0.13
 
 1. added icons in contact page with circle

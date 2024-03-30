@@ -5,7 +5,7 @@ import {
   afterNextRender,
   inject,
 } from '@angular/core';
-import { Icons } from '../utilities/icons/icons';
+import { IconActionType, Icons } from '../utilities/icons/icons';
 import { isPlatformBrowser } from '@angular/common';
 
 @Component({
@@ -45,5 +45,13 @@ export class ContactComponent {
       icon.style.left = x + 'px';
       icon.style.top = y + 'px';
     });
+  }
+
+  iconClicked(e: IconActionType) {
+    let { name, action } = e;
+  }
+
+  iconHovered(e: IconActionType) {
+    let { name, action } = e;
   }
 }

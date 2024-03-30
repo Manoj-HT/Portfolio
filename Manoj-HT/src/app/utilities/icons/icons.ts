@@ -1,3 +1,4 @@
+import { EventEmitter, Output } from '@angular/core';
 import { GitHubIcon } from './github.icon';
 import { GmailIcon } from './gmail.icon';
 import { LinkedInIcon } from './linkedIn.icon';
@@ -22,3 +23,8 @@ export const socialDetails = {
   gmail: {},
   linkedIn: {},
 };
+
+export type IconActionType = {
+  name: string;
+  action : 'click' | 'enter' | 'leave';
+}
