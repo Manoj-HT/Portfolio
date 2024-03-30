@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { NavService } from '../navigation/nav-service/nav.service';
 import { AssetVariablesType, AssetsManagerService } from '../utilities/assets-manager/assets-manager.service';
 @Component({
-  selector: 'app-resume-cv',
+  selector: 'resume-cv-page',
   standalone: true,
   imports: [],
   templateUrl: './resume-cv.component.html',

@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { NgOptimizedImage } from '@angular/common';
 
 @Component({
-  selector: 'app-home',
+  selector: 'home-page',
   standalone: true,
   imports: [NgOptimizedImage],
   templateUrl: './home.component.html',
