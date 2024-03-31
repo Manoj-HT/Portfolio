@@ -36,5 +36,17 @@
       (iconEnter)="iconHovered($event)"
       (iconLeave)="iconHovered($event)"
     />
+    <div
+      [className]="
+        isDetail() ? 'details anim-fade_in' : 'details anim-fade_out'
+      "
+      (mouseenter)="clearTimeoutForSocialDetailDisplay()"
+      (mouseleave)="addTimeoutForSocialDetailDisplay()"
+    >
+      <p>{{ socialDetails.id }}</p>
+      <a [href]="socialDetails.href" target="_blank">{{
+        socialDetails.linkName
+      }}</a>
+    </div>
   </div>
 </div>

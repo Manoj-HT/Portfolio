@@ -18,15 +18,16 @@ h1 {
   top: 100%;
   left: 0;
   width: 100%;
+  z-index: 1;
   background-color: var(--theme);
   transition: background-color 0.3s;
   animation: scrollDown 0.3s linear;
   @keyframes scrollDown {
-    from{
+    from {
       height: 0;
       overflow: hidden;
     }
-    to{
+    to {
       height: 300px;
       overflow: auto;
     }
@@ -65,6 +66,6 @@ li {
     left: -1.9px;
   }
 }
-.theme{
+.theme {
   width: 100%;
 }

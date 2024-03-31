@@ -1,3 +1,9 @@
+# 1.0.15
+
+1. added styles on icons
+2. added values of actions
+3. top menu z-index added 1
+
 # 1.0.14
 
 1. added actions on icons

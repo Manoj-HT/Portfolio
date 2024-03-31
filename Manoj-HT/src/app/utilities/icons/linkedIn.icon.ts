@@ -65,7 +65,7 @@ export class LinkedInIcon {
   @Output() iconEnter = new EventEmitter<IconActionType>();
   @Output() iconLeave = new EventEmitter<IconActionType>();
   iconAction: IconActionType = {
-    name: 'linkedin',
+    name: 'linkedIn',
     action: 'click',
   };
   handleIconClick() {

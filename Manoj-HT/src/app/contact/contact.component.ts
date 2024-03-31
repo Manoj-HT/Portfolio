@@ -4,8 +4,14 @@ import {
   PLATFORM_ID,
   afterNextRender,
   inject,
+  signal,
 } from '@angular/core';
-import { IconActionType, Icons } from '../utilities/icons/icons';
+import {
+  IconActionType,
+  Icons,
+  SocialDetailsType,
+  socialDetails,
+} from '../utilities/icons/icons';
 import { isPlatformBrowser } from '@angular/common';
 
 @Component({
@@ -20,15 +26,21 @@ export class ContactComponent {
   constructor() {
     afterNextRender(() => {
       if (isPlatformBrowser(this.platformId)) {
-        this.generateCircle();
+        if (window.screen.width > 768) {
+          this.generateCircle();
+        }
       }
     });
   }
 
+  isDetail = signal(false);
   generateCircle() {
     let container = document.querySelector('.container') as HTMLDivElement;
     let icons = document.querySelectorAll('.icon') as NodeListOf<HTMLElement>;
     let radius = 300;
+    if (window.screen.width <= 1000) {
+      radius = 150;
+    }
     let numCircles = icons.length;
     let angleIncrement = (2 * Math.PI) / numCircles;
 
@@ -47,11 +59,40 @@ export class ContactComponent {
     });
   }
 
+  socialDetails: SocialDetailsType = {
+    id: '',
+    href: '',
+    linkName: '',
+  };
   iconClicked(e: IconActionType) {
     let { name, action } = e;
+    this.socialDetails = socialDetails[name];
+    window.open(this.socialDetails.href, '_blank');
   }
 
+  timeOutForSocialDetailDisplay!: NodeJS.Timeout;
   iconHovered(e: IconActionType) {
+    this.clearTimeoutForSocialDetailDisplay();
     let { name, action } = e;
+    if (action == 'enter') {
+      this.isDetail.set(false);
+      setTimeout(() => {
+        this.isDetail.set(true);
+        this.socialDetails = socialDetails[name];
+      }, 1000);
+    }
+    if (action == 'leave') {
+      this.addTimeoutForSocialDetailDisplay();
+    }
+  }
+
+  addTimeoutForSocialDetailDisplay() {
+    this.timeOutForSocialDetailDisplay = setTimeout(() => {
+      this.isDetail.set(false);
+    }, 3000);
+  }
+
+  clearTimeoutForSocialDetailDisplay() {
+    clearTimeout(this.timeOutForSocialDetailDisplay);
   }
 }
