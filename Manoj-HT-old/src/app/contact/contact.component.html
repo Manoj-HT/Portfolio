@@ -1,0 +1,52 @@
+<div class="contact-page">
+  <div class="container">
+    <whatsapp-icon
+      class="icon"
+      (iconClicked)="iconClicked($event)"
+      (iconEnter)="iconHovered($event)"
+      (iconLeave)="iconHovered($event)"
+    />
+    <reddit-icon
+      class="icon"
+      (iconClicked)="iconClicked($event)"
+      (iconEnter)="iconHovered($event)"
+      (iconLeave)="iconHovered($event)"
+    />
+    <telegram-icon
+      class="icon"
+      (iconClicked)="iconClicked($event)"
+      (iconEnter)="iconHovered($event)"
+      (iconLeave)="iconHovered($event)"
+    />
+    <gmail-icon
+      class="icon"
+      (iconClicked)="iconClicked($event)"
+      (iconEnter)="iconHovered($event)"
+      (iconLeave)="iconHovered($event)"
+    />
+    <github-icon
+      class="icon"
+      (iconClicked)="iconClicked($event)"
+      (iconEnter)="iconHovered($event)"
+      (iconLeave)="iconHovered($event)"
+    />
+    <linkedin-icon
+      class="icon"
+      (iconClicked)="iconClicked($event)"
+      (iconEnter)="iconHovered($event)"
+      (iconLeave)="iconHovered($event)"
+    />
+    <div
+      [className]="
+        isDetail() ? 'details anim-fade_in' : 'details anim-fade_out'
+      "
+      (mouseenter)="clearTimeoutForSocialDetailDisplay()"
+      (mouseleave)="addTimeoutForSocialDetailDisplay()"
+    >
+      <p>{{ socialDetails.id }}</p>
+      <a [href]="socialDetails.href" target="_blank">{{
+        socialDetails.linkName
+      }}</a>
+    </div>
+  </div>
+</div>

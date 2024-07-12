@@ -1,0 +1,15 @@
+.icon-container {
+  transform: scale(1);
+  width: max-content;
+  margin: 10px;
+  transition-duration: 0.3s;
+  cursor: pointer;
+  &:hover {
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.4));
+    scale: 1.05;
+  }
+  &:active {
+    filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0.4));
+    scale: 0.9;
+  }
+}

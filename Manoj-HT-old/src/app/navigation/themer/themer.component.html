@@ -1,0 +1,18 @@
+<div class="theme_selection">
+  <div class="div1" (click)="setMode()">
+    <div class="wrapper">
+      <div class="toggle">
+        <input class="toggle-input" type="checkbox" [checked]="themeMode()" />
+        <div class="toggle-bg"></div>
+        <div class="toggle-switch">
+          <div class="toggle-switch-figure"></div>
+          <div class="toggle-switch-figureAlt"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="div2"></div>
+  @for(name of colorNames; track name){
+  <div (click)="changeTheme(name)" [class]="'div' + ($index + 3)"></div>
+  }
+</div>
