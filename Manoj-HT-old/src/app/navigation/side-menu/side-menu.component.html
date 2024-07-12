@@ -1,0 +1,29 @@
+<div class="side-menu_wrapper">
+  @if(isTitle()){
+  <h1 [className]="isTitleStyle() ? 'fadeOutAnimation' : ''">Manoj HT</h1>
+  }
+  <div class="selected_nav-background" id="selectedBackground"></div>
+  <ul>
+    @for(item of navList; track item){
+    <li (click)="navClicked(item)" [title]="item.title" [id]="item.routeLink">
+      {{ item.name }}
+    </li>
+    }
+  </ul>
+  <div [className]="isThemeChange ? 'theme scroll-up' : 'theme scroll-down'" >
+    <div id="chevron-wrapper" (click)="changeTheme()" >
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" id="chevron">
+        <path
+          fill="none"
+          stroke="#000"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M13 7 7 1 1 7"
+        ></path>
+      </svg>
+    </div>
+
+    <theme />
+  </div>
+</div>
