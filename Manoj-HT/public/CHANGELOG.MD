@@ -1,4 +1,10 @@
+# 1.0.19
+
+1. Angular update mode 4
+
 # 1.0.18
+
+1. Angular update mode 3
 
 # 1.0.17
 
