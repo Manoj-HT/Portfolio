@@ -5,11 +5,10 @@ import { ThemeChangerService } from '../../utilities/theme-changer/theme-changer
 import { ThemeComponent } from '../themer/themer.component';
 const SideMenuImports = [ThemeComponent]
 @Component({
-  selector: 'side-menu',
-  standalone: true,
-  imports: [SideMenuImports],
-  templateUrl: './side-menu.component.html',
-  styleUrls: ['./side-menu.component.less', '../title-style.less'],
+    selector: 'side-menu',
+    imports: [SideMenuImports],
+    templateUrl: './side-menu.component.html',
+    styleUrls: ['./side-menu.component.less', '../title-style.less']
 })
 export class SideMenuComponent {
   private navService = inject(NavService);

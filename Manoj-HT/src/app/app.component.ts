@@ -14,11 +14,10 @@ import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 const AppImports = [NavigationComponent, RouterOutlet];
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [AppImports],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.less',
+    selector: 'app-root',
+    imports: [AppImports],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.less'
 })
 export class AppComponent implements OnInit {
   title = 'Manoj_HT';

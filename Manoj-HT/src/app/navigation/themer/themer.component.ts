@@ -2,11 +2,10 @@ import { Component, inject } from '@angular/core';
 import { ThemeChangerService } from '../../utilities/theme-changer/theme-changer.service';
 
 @Component({
-  selector: 'theme',
-  standalone: true,
-  imports: [],
-  templateUrl: './themer.component.html',
-  styleUrls: ['./themer.component.less', './day-night_toggle.scss'],
+    selector: 'theme',
+    imports: [],
+    templateUrl: './themer.component.html',
+    styleUrls: ['./themer.component.less', './day-night_toggle.scss']
 })
 export class ThemeComponent {
   private themeService = inject(ThemeChangerService);

@@ -15,11 +15,10 @@ import {
 import { isPlatformBrowser } from '@angular/common';
 
 @Component({
-  selector: 'contact-page',
-  standalone: true,
-  imports: [Icons],
-  templateUrl: './contact.component.html',
-  styleUrl: './contact.component.less',
+    selector: 'contact-page',
+    imports: [Icons],
+    templateUrl: './contact.component.html',
+    styleUrl: './contact.component.less'
 })
 export class ContactComponent {
   platformId = inject(PLATFORM_ID);

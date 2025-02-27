@@ -4,11 +4,10 @@ import { Router } from '@angular/router';
 import { ThemeComponent } from '../themer/themer.component';
 const TopMenuImports = [ThemeComponent];
 @Component({
-  selector: 'top-menu',
-  standalone: true,
-  imports: [TopMenuImports],
-  templateUrl: './top-menu.component.html',
-  styleUrls: ['./top-menu.component.less', '../title-style.less'],
+    selector: 'top-menu',
+    imports: [TopMenuImports],
+    templateUrl: './top-menu.component.html',
+    styleUrls: ['./top-menu.component.less', '../title-style.less']
 })
 export class TopMenuComponent {
   private navService = inject(NavService);

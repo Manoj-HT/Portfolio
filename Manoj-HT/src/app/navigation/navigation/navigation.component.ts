@@ -4,11 +4,10 @@ import { TopMenuComponent } from '../top-menu/top-menu.component';
 const NavImports = [SideMenuComponent, TopMenuComponent]
 
 @Component({
-  selector: 'navigation',
-  standalone: true,
-  imports: [NavImports],
-  templateUrl: './navigation.component.html',
-  styleUrl: './navigation.component.less'
+    selector: 'navigation',
+    imports: [NavImports],
+    templateUrl: './navigation.component.html',
+    styleUrl: './navigation.component.less'
 })
 export class NavigationComponent {
 

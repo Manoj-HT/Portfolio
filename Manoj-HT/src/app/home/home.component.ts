@@ -4,11 +4,10 @@ import { HttpClient } from '@angular/common/http';
 import { NgOptimizedImage } from '@angular/common';
 
 @Component({
-  selector: 'home-page',
-  standalone: true,
-  imports: [NgOptimizedImage],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.less',
+    selector: 'home-page',
+    imports: [NgOptimizedImage],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.less'
 })
 export class HomeComponent implements OnInit, OnDestroy {
   private navService = inject(NavService);
