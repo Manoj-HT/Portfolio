@@ -73,7 +73,7 @@
 @media screen and (max-width: 768px) {
   .pill-nav {
     top: auto;
-    bottom: 20px;
+    bottom: 85px;
     left: 50%;
     transform: translateX(-50%);
   }

@@ -49,4 +49,8 @@
   .scroll-container {
     padding: unset;
   }
+
+  .scroll-container{
+    height: 80%;
+  }
 }
