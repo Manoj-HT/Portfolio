@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+:root {
+  /* Light Mode Colors */
+  --bg-color-light: #faf8f5;
+  --text-color-light: #111827;
+  --primary-color-light: #3b82f6;
+  --secondary-color-light: #f3f4f6;
+  --accent-color-light: #8b5cf6;
+  --card-bg-light: #ffffff;
+  --border-color-light: #e5e7eb;
+  
+  /* Dark Mode Colors */
+  --bg-color-dark: #0f172a;
+  --text-color-dark: #f8fafc;
+  --primary-color-dark: #3b82f6;
+  --secondary-color-dark: #1e293b;
+  --accent-color-dark: #a78bfa;
+  --card-bg-dark: #1e293b;
+  --border-color-dark: #334155;
+
+  /* Current Theme Variables (Default to Dark) */
+  --bg-color: var(--bg-color-dark);
+  --text-color: var(--text-color-dark);
+  --primary-color: var(--primary-color-dark);
+  --secondary-color: var(--secondary-color-dark);
+  --accent-color: var(--accent-color-dark);
+  --card-bg: var(--card-bg-dark);
+  --border-color: var(--border-color-dark);
+
+  --font-main: 'Quicksand', sans-serif;
+  --font-heading: 'Inter', sans-serif;
+}
+
+[data-theme="light"] {
+  --bg-color: var(--bg-color-light);
+  --text-color: var(--text-color-light);
+  --primary-color: var(--primary-color-light);
+  --secondary-color: var(--secondary-color-light);
+  --accent-color: var(--accent-color-light);
+  --card-bg: var(--card-bg-light);
+  --border-color: var(--border-color-light);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow: hidden; /* Prevent page scroll as per requirements */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  color: var(--text-color);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+/* Base button styles */
+button {
+  cursor: pointer;
+  font-family: var(--font-main);
+  border: none;
+  outline: none;
+}
+
+/* Beautiful custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-text {
+  font-family: var(--font-heading);
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  background-size: 200% 200%;
+  animation: gradient-shift 5s ease infinite;
+  background-clip: text;
+  color: transparent;
+}

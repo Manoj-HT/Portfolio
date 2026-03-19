@@ -1,0 +1,7 @@
+<main class="app-container">
+  <nav-bar></nav-bar>
+  <div class="scroll-container" [style.opacity]="isRouting() ? '0' : '1'" style="transition: opacity 300ms ease-in-out;">
+    <router-outlet></router-outlet>
+  </div>
+</main>
+<dialog-box></dialog-box>

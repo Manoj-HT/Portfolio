@@ -1,0 +1,48 @@
+<div class="page-container">
+  <div class="split-layout">
+    <section class="section-column projects-section">
+      <div class="section-header">
+        <h2 class="title">Projects</h2>
+        <p class="subtitle">A selection of my recent work</p>
+      </div>
+      
+      <div class="grid-container projects-grid">
+        @for (project of projects; track project.name) {
+          <div class="grid-item project-card" (click)="openProjectDialog(project)">
+            <div class="card-content">
+              <h3>{{ project.name }}</h3>
+              <p class="company">{{ project.company }}</p>
+              <div class="tech-stack">{{ project.technologies }}</div>
+            </div>
+            <div class="card-action">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+          </div>
+        }
+      </div>
+    </section>
+
+    <div class="line-divider"></div>
+
+    <section class="section-column skills-section">
+      <div class="section-header">
+        <h2 class="title">Skills</h2>
+        <p class="subtitle">Technologies I work with</p>
+      </div>
+      
+      <div class="grid-container skills-grid">
+        @for (skill of skills; track skill.name) {
+          <div class="grid-item skill-card" (click)="openSkillDialog(skill)">
+            <div class="card-content">
+              <div class="skill-header">
+                <h3>{{ skill.name }}</h3>
+                <span class="proficiency-dot" [class]="skill.proficiency.toLowerCase()"></span>
+              </div>
+              <p class="category">{{ skill.category }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    </section>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+{
+  "hosting": {
+    "source": "portfolio-app/dist/portfolio-app/browser",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "frameworksBackend": {
+      "region": "us-central1"
+    }
+  }
+}

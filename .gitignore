@@ -128,3 +128,9 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+portfolio-app/dist
+portfolio-app/.angular
+portfolio-app/.vscode
+
+.firebase

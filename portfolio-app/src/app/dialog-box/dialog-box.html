@@ -1,0 +1,48 @@
+<div class="overlay" [class.open]="dialogService.isOpen()" (click)="closeDialog()">
+  <div class="dialog-content" [class.open]="dialogService.isOpen()" (click)="$event.stopPropagation()">
+    <button class="close-btn" (click)="closeDialog()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    
+    @if (dialogService.data(); as data) {
+      <div class="dialog-header">
+        <h2 class="dialog-title">{{ data.title }}</h2>
+        @if (data.type === 'project') {
+          <span class="badge project-badge">Project</span>
+        } @else {
+          <span class="badge skill-badge">Skill</span>
+        }
+      </div>
+
+      <div class="dialog-body">
+        <p class="description">{{ data.description }}</p>
+
+        <div class="details-grid">
+          @if (data.type === 'project') {
+            <div class="detail-item">
+              <span class="label">Technologies</span>
+              <span class="value">{{ data.technologies }}</span>
+            </div>
+            <div class="detail-item">
+              <span class="label">Time Period</span>
+              <span class="value">{{ data.timePeriod }}</span>
+            </div>
+            <div class="detail-item">
+              <span class="label">Company</span>
+              <span class="value">{{ data.company }}</span>
+            </div>
+          } @else if (data.type === 'skill') {
+            <div class="detail-item">
+              <span class="label">Category</span>
+              <span class="value">{{ data.category }}</span>
+            </div>
+            <div class="detail-item">
+              <span class="label">Proficiency</span>
+              <span class="value">{{ data.proficiency }}</span>
+            </div>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</div>

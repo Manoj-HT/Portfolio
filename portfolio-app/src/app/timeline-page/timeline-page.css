@@ -1,0 +1,232 @@
+.timeline-container {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.timeline-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.page-title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  background-clip: text;
+  color: transparent;
+  background-size: 200% 200%;
+  animation: gradient-shift 5s ease infinite;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--text-color);
+  opacity: 0.7;
+  font-size: 1.2rem;
+}
+
+.timeline-wrapper {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.center-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, var(--border-color), transparent);
+  transform: translateX(-50%);
+}
+
+.timeline-section {
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.8rem;
+  color: var(--text-color);
+  background: var(--bg-color);
+  padding: 0 1rem;
+  max-width: max-content;
+  margin-inline: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  margin-bottom: 3rem;
+}
+
+.timeline-item.left-item {
+  left: 0;
+  padding-right: 3rem;
+}
+
+.timeline-item.right-item {
+  left: 50%;
+  padding-left: 3rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 20px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  border: 4px solid var(--bg-color);
+  z-index: 2;
+  box-shadow: 0 0 0 4px var(--card-bg);
+}
+
+.left-item .timeline-dot {
+  right: -8px; /* half of 16px */
+}
+
+.right-item .timeline-dot {
+  left: -8px;
+}
+
+.timeline-content {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-color);
+}
+
+/* Add an arrow pointing to the center line */
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.left-item .timeline-content::before {
+  right: -10px;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent var(--border-color);
+}
+
+.right-item .timeline-content::before {
+  left: -10px;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent var(--border-color) transparent transparent;
+}
+
+/* Hover state for arrow */
+.timeline-item:hover.left-item .timeline-content::before {
+  border-color: transparent transparent transparent var(--primary-color);
+}
+
+.timeline-item:hover.right-item .timeline-content::before {
+  border-color: transparent var(--primary-color) transparent transparent;
+}
+
+
+.role {
+  font-size: 1.3rem;
+  color: var(--text-color);
+  margin-bottom: 0.25rem;
+}
+
+.company {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.time-period {
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  background-color: var(--secondary-color);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+
+.tech-stack {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.tech-stack span {
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+.achievement {
+  font-size: 0.95rem;
+  padding: 1rem;
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  border-left: 3px solid var(--primary-color);
+}
+
+
+/* Mobile view */
+@media screen and (max-width: 768px) {
+  .center-line {
+    left: 24px;
+  }
+  
+  .timeline-item.left-item,
+  .timeline-item.right-item {
+    width: 100%;
+    left: 0;
+    padding-left: 64px;
+    padding-right: 0;
+  }
+  
+  .left-item .timeline-dot,
+  .right-item .timeline-dot {
+    left: 16px;
+    right: auto;
+  }
+  
+  .left-item .timeline-content::before,
+  .right-item .timeline-content::before {
+    left: -10px;
+    right: auto;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--border-color) transparent transparent;
+  }
+  
+  .timeline-item:hover.left-item .timeline-content::before,
+  .timeline-item:hover.right-item .timeline-content::before {
+    border-color: transparent var(--primary-color) transparent transparent;
+  }
+}

@@ -1,0 +1,39 @@
+<div class="youtube-container">
+  <div class="header-section">
+    <div class="header-text">
+      <h1 class="page-title">YouTube Channel</h1>
+      <p class="subtitle">Check out my latest videos and tutorials</p>
+    </div>
+    <a [href]="youtubeChannelUrl" target="_blank" rel="noopener noreferrer" class="subscribe-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+      <span>Subscribe</span>
+    </a>
+  </div>
+
+  <div class="categories-wrapper">
+    @for (category of categories; track category.name) {
+      <div class="category-section">
+        <h2 class="category-title">{{ category.name }}</h2>
+        
+        <div class="video-grid">
+          @for (video of category.videos; track video.title) {
+            <div class="video-card">
+              <div class="video-wrapper">
+                <iframe [src]="video.url" 
+                        title="{{ video.title }}" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+              </div>
+              <div class="video-info">
+                <h3 class="video-title">{{ video.title }}</h3>
+                <p class="video-desc">{{ video.description }}</p>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</div>

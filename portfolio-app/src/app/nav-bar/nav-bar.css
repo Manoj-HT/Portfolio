@@ -1,0 +1,93 @@
+.pill-nav {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  max-width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.nav-icon {
+  display: none;
+}
+
+.nav-links a:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.nav-links a.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Responsiveness based on the prompt */
+@media screen and (max-width: 1024px) {
+  /* Let's assume Apple devices could also fall in here or we use feature detection, but CSS alone just handles screen size mostly */
+}
+
+@media screen and (max-width: 768px) {
+  .pill-nav {
+    top: auto;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .nav-text {
+    display: none;
+  }
+
+  .nav-icon {
+    display: block;
+  }
+  
+  .nav-links a {
+    padding: 0.8rem;
+    gap: 0;
+  }
+}

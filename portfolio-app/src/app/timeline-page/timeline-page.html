@@ -1,0 +1,54 @@
+<div class="timeline-container">
+  <div class="timeline-header">
+    <h1 class="page-title">Journey So Far</h1>
+    <p class="subtitle">My work experience and educational background</p>
+  </div>
+  
+  <div class="timeline-wrapper">
+    <div class="center-line"></div>
+    
+    <div class="timeline-section work-experience">
+      <h2 class="section-title">
+        <span class="icon">💼</span>
+        Work Experience
+      </h2>
+      
+      @for (exp of experience; track exp.company; let i = $index) {
+        <div class="timeline-item" [class.left-item]="i % 2 === 0" [class.right-item]="i % 2 !== 0">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content card">
+            <h3 class="role">{{ exp.role }}</h3>
+            <h4 class="company">{{ exp.company }}</h4>
+            <span class="time-period">{{ exp.timePeriod }}</span>
+            <p class="desc responsibilities">{{ exp.responsibilities }}</p>
+            <div class="tech-stack">Tech: <span>{{ exp.technologies }}</span></div>
+            <div class="achievement">
+              <strong>Key Achievement:</strong> {{ exp.achievements }}
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+    
+    <div class="timeline-section education">
+      <h2 class="section-title">
+        <span class="icon">🎓</span>
+        Education
+      </h2>
+      
+      @for (edu of education; track edu.degree; let i = $index) {
+        <div class="timeline-item" [class.left-item]="i % 2 !== 0" [class.right-item]="i % 2 === 0">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content card">
+            <h3 class="role">{{ edu.degree }}</h3>
+            <h4 class="company">{{ edu.university }}</h4>
+            <span class="time-period">{{ edu.timePeriod }}</span>
+            <div class="achievement">
+              <strong>Snapshot:</strong> {{ edu.achievements }}
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</div>
