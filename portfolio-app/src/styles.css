@@ -12,12 +12,12 @@
   --border-color-light: #e5e7eb;
   
   /* Dark Mode Colors */
-  --bg-color-dark: #0f172a;
+  --bg-color-dark: #042339;
   --text-color-dark: #f8fafc;
   --primary-color-dark: #3b82f6;
   --secondary-color-dark: #1e293b;
   --accent-color-dark: #a78bfa;
-  --card-bg-dark: #1e293b;
+  --card-bg-dark: #122a51;
   --border-color-dark: #334155;
 
   /* Current Theme Variables (Default to Dark) */
@@ -51,7 +51,7 @@
 
 body {
   font-family: var(--font-main);
-  background-color: var(--bg-color);
+  /* background-color: var(--bg-color); */
   color: var(--text-color);
   line-height: 1.6;
   overflow: hidden; /* Prevent page scroll as per requirements */

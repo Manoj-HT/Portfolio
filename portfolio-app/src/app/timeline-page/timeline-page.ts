@@ -54,13 +54,11 @@ export class TimelinePage {
       degree: 'Data science and Artificial Intelligence',
       university: 'PES University, Bangalore',
       timePeriod: 'Present',
-      achievements: 'Top 10% of class, actively participating in AI/ML hackathons.',
     },
     {
       degree: 'Mechanical Engineering',
       university: 'GM Institute of Technology, Davangere',
       timePeriod: '2021',
-      achievements: 'Graduated with First Class with Distinction.',
     },
   ];
 }

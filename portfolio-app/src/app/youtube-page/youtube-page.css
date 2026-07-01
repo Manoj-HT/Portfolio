@@ -9,8 +9,10 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 4rem;
-  border-bottom: 1px solid var(--border-color);
-  padding-bottom: 2rem;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 10px 20px;
+  backdrop-filter: blur(10px);
 }
 
 .page-title {
@@ -81,17 +83,19 @@
 }
 
 .video-card {
-  background: var(--card-bg);
+  /* background: var(--card-bg); */
   border: 1px solid var(--border-color);
   border-radius: 16px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
 }
 
 .video-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   border-color: var(--accent-color);
+  background: var(--card-bg);
 }
 
 .video-wrapper {

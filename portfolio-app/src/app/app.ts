@@ -10,10 +10,11 @@ import {
 import { NavBar } from './nav-bar/nav-bar';
 import { DialogBox } from './dialog-box/dialog-box';
 import { DialogService } from './dialog.service';
+import { Background } from './background/background';
 
 @Component({
   selector: 'portfolio-root',
-  imports: [RouterOutlet, NavBar, DialogBox],
+  imports: [RouterOutlet, NavBar, DialogBox, Background],
   templateUrl: './app.html',
   changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './app.css',

@@ -1,0 +1,96 @@
+.background-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  --image-size: 1004px;
+
+  .img-container.only-desktop {
+    width: 100%;
+    height: 100%;
+
+    img:nth-child(1) {
+      position: absolute;
+      top: calc((var(--image-size) / 2) * -0.9);
+      left: calc((var(--image-size) / 2) * -0.8);
+      scale: 0.5;
+      /* opacity: 0.4; */
+    }
+
+    img:nth-child(2) {
+      position: absolute;
+      bottom: calc((var(--image-size) / 2) * -0.7);
+      right: calc((var(--image-size) / 2) * -0.6);
+      scale: 0.9;
+      opacity: 0.6;
+    }
+  }
+
+  .img-container.only-mobile {
+    width: 100%;
+    height: 100%;
+    img {
+      position: absolute;
+      bottom: calc((100vw / 2) * -1);
+      margin: auto;
+      width: 100vw;
+    }
+  }
+}
+
+.only-desktop {
+  display: block;
+}
+
+.only-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .only-desktop {
+    display: none;
+  }
+
+  .only-mobile {
+    display: block;
+  }
+}
+
+.rotate {
+  animation: rotation 120s linear 0ms infinite;
+}
+
+.anti-rotate {
+  animation: anti-rotation 240s linear 0ms infinite;
+}
+
+@keyframes rotation {
+  0% {
+    rotate: 0deg;
+  }
+
+  50% {
+    rotate: 180deg;
+  }
+
+  100% {
+    rotate: 360deg;
+  }
+}
+
+@keyframes anti-rotation {
+  0% {
+    rotate: 0deg;
+  }
+
+  50% {
+    rotate: -180deg;
+  }
+
+  100% {
+    rotate: -360deg;
+  }
+}
