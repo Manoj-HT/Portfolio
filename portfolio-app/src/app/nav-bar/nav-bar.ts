@@ -1,4 +1,11 @@
-import { Component, signal, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import {
+  Component,
+  signal,
+  OnInit,
+  Inject,
+  PLATFORM_ID,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { isPlatformBrowser } from '@angular/common';
 
@@ -7,7 +14,8 @@ import { isPlatformBrowser } from '@angular/common';
   standalone: true,
   imports: [RouterLink, RouterLinkActive],
   templateUrl: './nav-bar.html',
-  styleUrl: './nav-bar.css'
+  changeDetection: ChangeDetectionStrategy.Eager,
+  styleUrl: './nav-bar.css',
 })
 export class NavBar implements OnInit {
   isDarkMode = signal(true);
@@ -27,7 +35,7 @@ export class NavBar implements OnInit {
   }
 
   toggleTheme() {
-    this.isDarkMode.update(v => !v);
+    this.isDarkMode.update((v) => !v);
     const newTheme = this.isDarkMode() ? 'dark' : 'light';
     if (isPlatformBrowser(this.platformId)) {
       document.documentElement.setAttribute('data-theme', newTheme);

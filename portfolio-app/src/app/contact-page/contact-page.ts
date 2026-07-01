@@ -1,12 +1,13 @@
 import { httpResource } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'contact-page',
   imports: [],
   templateUrl: './contact-page.html',
   styleUrl: './contact-page.css',
-  standalone: true
+  changeDetection: ChangeDetectionStrategy.Eager,
+  standalone: true,
 })
 export class ContactPage {
   contactInfo = [
@@ -14,26 +15,26 @@ export class ContactPage {
       type: 'Email',
       value: 'manulogan101@gmail.com',
       link: 'mailto:manulogan101@gmail.com',
-      icon: '✉️'
+      icon: '✉️',
     },
     {
       type: 'Phone',
       value: '+91-8277429750',
       link: 'tel:+918277429750',
-      icon: '📱'
+      icon: '📱',
     },
     {
       type: 'LinkedIn',
       value: 'linkedin.com/in/manoj-ht',
       link: 'https://www.linkedin.com/in/manoj-ht/',
-      icon: '💼'
+      icon: '💼',
     },
     {
       type: 'Reddit',
       value: 'reddit.com/user/manoj-ht',
       link: 'https://www.reddit.com/user/manoj-ht/',
-      icon: '👾'
-    }
+      icon: '👾',
+    },
   ];
 
   downloadResume() {
