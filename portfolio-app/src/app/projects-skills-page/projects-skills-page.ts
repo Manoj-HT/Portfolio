@@ -54,15 +54,15 @@ export class ProjectsSkillsPage {
     {
       name: 'Opus 2.0',
       description:
-        'A comprehensive property management platform overhaul including dynamic form builder.',
-      technologies: 'Angular, Node.js',
+        'A comprehensive platform for multiple brands',
+      technologies: 'TypeScript, Node.js',
       timePeriod: '2025 - present',
       company: 'Neighborly India GCC',
     },
     {
       name: 'Customer Portal',
-      description: 'A dedicated portal for customers to track service requests and billing.',
-      technologies: 'React.js, MongoDB',
+      description: 'A dedicated portal for customers to book, track service requests and billing.',
+      technologies: 'React.js',
       timePeriod: '2025 - present',
       company: 'Neighborly India GCC',
     },
@@ -70,7 +70,7 @@ export class ProjectsSkillsPage {
       name: 'MS AADB2C Integration',
       description:
         'Azure Active Directory B2C integration for secure customer identity and access management.',
-      technologies: 'Angular, Azure',
+      technologies: 'Native, Azure',
       timePeriod: '2025 - present',
       company: 'Neighborly India GCC',
     },

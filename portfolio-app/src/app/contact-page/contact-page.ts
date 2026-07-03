@@ -35,6 +35,18 @@ export class ContactPage {
       link: 'https://www.reddit.com/user/manoj-ht/',
       icon: '👾',
     },
+    {
+      type: 'Github',
+      value: 'github.com/user/manoj-ht',
+      link: 'https://www.github.com/manoj-ht/',
+      icon: '🐙',
+    },
+    {
+      type: 'Youtube',
+      value: 'youtube.com/@CodeMagi',
+      link: 'https://www.youtube.com/@CodeMagi',
+      icon: '📺',
+    }
   ];
 
   downloadResume() {
