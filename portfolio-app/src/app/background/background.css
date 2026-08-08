@@ -1,3 +1,7 @@
+:root {
+  --food-analyzer-theme: radial-gradient(circle at 10% 20%, #f4f6f3 0%, #e6eae4 90%);
+}
+
 .background-container {
   width: 100%;
   height: 100%;
@@ -5,6 +9,10 @@
   overflow: hidden;
   background-color: var(--bg-color);
   transition: background-color 0.3s ease, color 0.3s ease;
+
+  &.food-analyzer-bg {
+    background: var(--food-analyzer-theme);
+  }
 
   --image-size: 1004px;
 
@@ -32,6 +40,7 @@
   .img-container.only-mobile {
     width: 100%;
     height: 100%;
+
     img {
       position: absolute;
       bottom: calc((100vw / 2) * -1);

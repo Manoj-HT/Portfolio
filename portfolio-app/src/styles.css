@@ -10,7 +10,7 @@
   --accent-color-light: #8b5cf6;
   --card-bg-light: #ffffff;
   --border-color-light: #e5e7eb;
-  
+
   /* Dark Mode Colors */
   --bg-color-dark: #042339;
   --text-color-dark: #f8fafc;
@@ -54,11 +54,17 @@ body {
   /* background-color: var(--bg-color); */
   color: var(--text-color);
   line-height: 1.6;
-  overflow: hidden; /* Prevent page scroll as per requirements */
+  overflow: hidden;
+  /* Prevent page scroll as per requirements */
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 600;
   margin-bottom: 0.5em;
   color: var(--text-color);
@@ -86,13 +92,16 @@ button {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--bg-color);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--border-color);
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary-color);
 }
@@ -101,9 +110,11 @@ button {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }

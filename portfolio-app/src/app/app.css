@@ -21,8 +21,24 @@
   overflow-y: auto;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  padding: 80px 20px 20px 20px; /* Space for nav */
+  padding: 80px 20px 20px 20px;
+  /* Space for nav */
   box-sizing: border-box;
+}
+
+.scroll-container.no-nav {
+  padding-top: 20px;
+}
+
+.scroll-container.food-analyzer-bg {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.scroll-container.food-analyzer-bg::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 /* Page transitions */
@@ -30,15 +46,18 @@
   opacity: 0;
   transform: translateY(20px);
 }
+
 .page-enter-active {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
+
 .page-leave {
   opacity: 1;
   transform: translateY(0);
 }
+
 .page-leave-active {
   opacity: 0;
   transform: translateY(-20px);
@@ -50,12 +69,12 @@
     padding: unset;
   }
 
-  .scroll-container{
+  .scroll-container {
     height: 80%;
   }
 }
 
-background-component{
+background-component {
   width: 100vw;
   height: 100vh;
   overflow: hidden;

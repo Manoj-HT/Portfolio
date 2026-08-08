@@ -1,0 +1,42 @@
+<div class="hub-container">
+  <div class="hub-header">
+    <div class="header-content">
+      <h1 class="hub-title">Privacy Policies</h1>
+      <p class="hub-subtitle">
+        Transparency, data ownership, and privacy standards across our software applications. Select an app below to view its specific privacy policy.
+      </p>
+    </div>
+  </div>
+
+  <div class="cards-grid">
+    @for (app of apps; track app.id) {
+      <div class="app-card" [routerLink]="[app.route]">
+        <div class="card-top">
+          <div class="app-icon-wrapper">
+            <span class="app-icon">{{ app.icon }}</span>
+          </div>
+          <div class="card-badges">
+            <span class="badge category-badge">{{ app.category }}</span>
+            <span class="badge feature-badge">{{ app.badge }}</span>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <h2 class="app-name">{{ app.name }}</h2>
+          <p class="app-description">{{ app.description }}</p>
+        </div>
+
+        <div class="card-footer">
+          <div class="meta-date">Updated: {{ app.lastUpdated }}</div>
+          <a [routerLink]="[app.route]" class="read-btn">
+            <span>Read Policy</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    }
+  </div>
+</div>

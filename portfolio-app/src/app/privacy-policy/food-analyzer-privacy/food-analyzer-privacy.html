@@ -1,0 +1,201 @@
+<div class="fa-privacy-theme">
+  <div class="privacy-container">
+    <div class="top-nav-bar">
+      <a routerLink="/privacy-policy" class="back-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m15 18-6-6 6-6" />
+        </svg>
+        <span>Back to Privacy Policies</span>
+      </a>
+      <span class="app-tag">FoodAnalyzer</span>
+    </div>
+
+    <div class="header-section">
+      <div class="header-text">
+        <h1 class="page-title">Privacy Policy for FoodAnalyzer</h1>
+        <p class="subtitle">Privacy-First &amp; Local-First Health Management Platform</p>
+      </div>
+      <div class="meta-badges">
+        <span class="badge"><strong class="badge-label">Effective Date:</strong> August 8, 2026</span>
+        <span class="badge"><strong class="badge-label">Last Updated:</strong> August 8, 2026</span>
+      </div>
+    </div>
+
+    <div class="promise-card">
+      <div class="promise-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          <path d="m9 12 2 2 4-4" />
+        </svg>
+      </div>
+      <div class="promise-content">
+        <h2>Our Commitment to Your Privacy</h2>
+        <p>
+          At <strong>FoodAnalyzer</strong>, we believe your health, dietary choices, voice recordings, and exercise
+          activities are deeply personal.
+          We designed FoodAnalyzer from the ground up with a <strong>privacy-first, local-first mindset</strong>.
+        </p>
+        <blockquote class="core-promise">
+          <strong>The Core Promise:</strong> Your data belongs to you. We do not sell your personal information, we do
+          not build advertising profiles, and we treat cloud storage strictly as an optional backup layer to keep your
+          records safe across devices.
+        </blockquote>
+      </div>
+    </div>
+
+    <div class="sections-grid">
+      <!-- Section 1 -->
+      <section class="policy-card">
+        <div class="section-header">
+          <div class="section-number">01</div>
+          <h2>How Your Data is Handled &amp; Stored</h2>
+        </div>
+        <div class="sub-section">
+          <h3>A. Local-First Browser &amp; Device Storage (<code>IndexedDB</code>)</h3>
+          <ul>
+            <li><strong>Primary Storage:</strong> All your daily meal entries, exercise logs, calculated macronutrients,
+              and personalized health recommendations are stored directly on your browser or mobile device inside an
+              isolated, encrypted local database (<code>IndexedDB</code>).</li>
+            <li><strong>Offline Capability:</strong> You can access your logs, review your weekly food diary, and track
+              your activity history even without an active internet connection.</li>
+          </ul>
+        </div>
+        <div class="sub-section">
+          <h3>B. Cloud Synchronization &amp; Secure Backup Only</h3>
+          <ul>
+            <li><strong>Purpose of Cloud Backup:</strong> When you create an account or sign in with Google OAuth, a
+              copy of your account profile and structured logs is saved to our secure cloud database (Supabase)
+              <strong>strictly to serve as a backup</strong>.</li>
+            <li><strong>Why We Store Backups:</strong> If you switch smartphones, clear your browser cache, or
+              re-install the application, your health records are safely restored so you never lose your personal
+              history.</li>
+            <li><strong>No Unnecessary Telemetry:</strong> We store only what is essential for restoring your account
+              (email, display name, structured health preferences, meal/workout entries, and generated recommendations).
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Section 2 -->
+      <section class="policy-card">
+        <div class="section-header">
+          <div class="section-number">02</div>
+          <h2>Right to Data Erasure &amp; Full Account Deletion</h2>
+        </div>
+        <p>You retain <strong>complete control</strong> over your information at all times.</p>
+        <ul class="policy-list">
+          <li><strong>On-Demand Deletion:</strong> If you ever wish to remove your data, delete your account, or purge
+            your cloud backups, you can request immediate account and data erasure.</li>
+          <li><strong>How to Request Removal:</strong> Simply contact us at <a href="mailto:manulogan101@gmail.com"
+              class="inline-link">manulogan101@gmail.com</a> or use the in-app account deletion request option in your
+            Profile tab.</li>
+          <li><strong>Immediate Purge:</strong> Upon receiving your request, all cloud backup records, user profiles,
+            and associated database entries will be <strong>permanently deleted within 24 hours</strong>.</li>
+          <li><strong>Local Purge:</strong> You can also clear your local application data at any time directly through
+            your browser or mobile app settings.</li>
+        </ul>
+      </section>
+
+      <!-- Section 3 -->
+      <section class="policy-card">
+        <div class="section-header">
+          <div class="section-number">03</div>
+          <h2>Data Ownership &amp; Native Gzip Export</h2>
+        </div>
+        <p>We believe in complete data portability without vendor lock-in.</p>
+        <ul class="policy-list">
+          <li><strong>Full Data Export:</strong> You can export your entire health history at any time from your Profile
+            page.</li>
+          <li><strong>Stream Compressed Backup (<code>.json.gz</code>):</strong> Exports are packed using native Web
+            Gzip stream compression (<code>CompressionStream('gzip')</code>) to create lightweight, portable backup
+            files.</li>
+          <li><strong>Native Mobile Sharing:</strong> On mobile devices (Android), FoodAnalyzer routes your backups
+            directly to your native <code>Documents</code> folder via <code>@capacitor/filesystem</code> or lets you
+            share them securely via Google Drive, messaging apps, or local storage.</li>
+        </ul>
+      </section>
+
+      <!-- Section 4 -->
+      <section class="policy-card">
+        <div class="section-header">
+          <div class="section-number">04</div>
+          <h2>Zero Data Monetization &amp; Zero Third-Party Advertising</h2>
+        </div>
+        <ul class="policy-list">
+          <li><strong>No Data Selling:</strong> We <strong>never</strong> sell, rent, monetize, or share your
+            nutritional entries, body metrics, or exercise logs with third-party advertisers, data brokers, or insurance
+            companies.</li>
+          <li><strong>No Ad Trackers:</strong> FoodAnalyzer does not contain third-party ad network scripts, tracking
+            pixels, or cross-site behavioral analytics trackers.</li>
+        </ul>
+      </section>
+
+      <!-- Section 5 -->
+      <section class="policy-card">
+        <div class="section-header">
+          <div class="section-number">05</div>
+          <h2>Artificial Intelligence &amp; Audio / Vision Processing</h2>
+        </div>
+        <p>To provide instant nutritional insights, food identification, and speech-to-text logging:</p>
+        <ul class="policy-list">
+          <li><strong>Voice &amp; Audio Notes:</strong> Spoken meal recordings are processed strictly to transcribe your
+            voice into plain text. Voice recordings are processed in real-time and are <strong>never</strong> stored
+            permanently on third-party servers.</li>
+          <li><strong>Food Photographs:</strong> Meal photos uploaded for visual recognition are analyzed solely to
+            identify food items and estimate macronutrients. Photos are not used for public AI training datasets or
+            facial recognition.</li>
+          <li><strong>Cloud AI Fallbacks:</strong> High-level contextual recommendations are processed via secure cloud
+            endpoints (Google Gemini 1.5 Flash) over HTTPS SSL encryption.</li>
+        </ul>
+      </section>
+
+      <!-- Section 6 -->
+      <section class="policy-card">
+        <div class="section-header">
+          <div class="section-number">06</div>
+          <h2>Future Roadmap: 100% Full Offline Mode &amp; On-Device AI</h2>
+        </div>
+        <p>We are actively advancing our privacy technology to bring complete offline autonomy to FoodAnalyzer:</p>
+        <ul class="policy-list">
+          <li><strong>On-Device Micro-SLMs:</strong> We are actively researching and developing client-side Small
+            Language Models (<code>Qwen2.5-1.5B</code>) quantized to run directly inside your device's browser using
+            WebGPU and WebAssembly (WASM).</li>
+          <li><strong>Zero Cloud Dependency:</strong> In upcoming updates, AI entity extraction and nutritional analysis
+            will be capable of executing <strong>100% locally on your smartphone or browser</strong> without sending a
+            single byte of audio, image, or text data over the internet.</li>
+        </ul>
+      </section>
+
+      <!-- Section 7 -->
+      <section class="policy-card contact-section">
+        <div class="section-header">
+          <div class="section-number">07</div>
+          <h2>Contact Us</h2>
+        </div>
+        <p>If you have any questions, concerns, or feedback regarding this Privacy Policy, or if you would like to
+          submit a data erasure request, please reach out to us:</p>
+
+        <div class="contact-details">
+          <div class="contact-item">
+            <span class="label">Project by:</span>
+            <span class="val">Manoj H T &amp; Team</span>
+          </div>
+          <div class="contact-item">
+            <span class="label">Contact Email:</span>
+            <a href="mailto:manulogan101@gmail.com" class="inline-link">manulogan101@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <span class="label">Department:</span>
+            <span class="val">Department of Data science and Artificial intelligence</span>
+          </div>
+          <div class="contact-item">
+            <span class="label">Institution:</span>
+            <span class="val">PES University Electronic City Campus, Bengaluru – 560100, Karnataka, India</span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

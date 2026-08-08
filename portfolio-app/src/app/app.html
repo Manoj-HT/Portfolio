@@ -1,7 +1,9 @@
 <main class="app-container">
   <background-component></background-component>
-  <nav-bar></nav-bar>
-  <div class="scroll-container" [style.opacity]="isRouting() ? '0' : '1'" style="transition: opacity 300ms ease-in-out;">
+  @if (!isPrivacyModule()) {
+    <nav-bar></nav-bar>
+  }
+  <div [class]="'scroll-container ' + (isPrivacyModule() ? 'no-nav ' : '') + backgroundService.backgroundOptions().classname" [style.opacity]="isRouting() ? '0' : '1'" style="transition: opacity 300ms ease-in-out;">
     <router-outlet></router-outlet>
   </div>
 </main>

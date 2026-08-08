@@ -11,6 +11,7 @@ import { NavBar } from './nav-bar/nav-bar';
 import { DialogBox } from './dialog-box/dialog-box';
 import { DialogService } from './dialog.service';
 import { Background } from './background/background';
+import { BackgroundService } from './background/background.service';
 
 @Component({
   selector: 'portfolio-root',
@@ -22,6 +23,8 @@ import { Background } from './background/background';
 export class App {
   protected readonly title = signal('portfolio-app');
   public readonly isRouting = signal(false);
+  public readonly isPrivacyModule = signal(false);
+  public backgroundService = inject(BackgroundService);
   private router = inject(Router);
   private dialogService = inject(DialogService);
 
@@ -36,6 +39,14 @@ export class App {
         event instanceof NavigationCancel ||
         event instanceof NavigationError
       ) {
+        if (event instanceof NavigationEnd) {
+          const url = event.urlAfterRedirects || event.url;
+          this.isPrivacyModule.set(
+            url.startsWith('/privacy-policy') ||
+            url.startsWith('/foodanalyzer/privacy-policy') ||
+            url.startsWith('/privacy')
+          );
+        }
         // Small timeout to ensure DOM finishes swap before fading in
         setTimeout(() => this.isRouting.set(false), 50);
       }

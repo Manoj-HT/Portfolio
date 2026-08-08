@@ -1,0 +1,231 @@
+.privacy-container {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: var(--text-color);
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  border: 1px solid var(--border-color);
+  padding: 24px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  background: var(--card-bg);
+  gap: 1.5rem;
+}
+
+.page-title {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 200% 200%;
+  animation: gradient-shift 5s ease infinite;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--text-color);
+  opacity: 0.8;
+  font-size: 1.15rem;
+}
+
+.meta-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+
+.badge {
+  font-size: 0.85rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 20px;
+  background: var(--secondary-color);
+  border: 1px solid var(--border-color);
+  white-space: nowrap;
+}
+
+.badge-label {
+  color: var(--primary-color);
+}
+
+.promise-card {
+  display: flex;
+  gap: 1.5rem;
+  border: 1px solid var(--primary-color);
+  background: rgba(59, 130, 246, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 16px;
+  margin-bottom: 2.5rem;
+}
+
+.promise-icon {
+  color: var(--primary-color);
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 4px;
+}
+
+.promise-content h2 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 0.8rem;
+}
+
+.core-promise {
+  margin-top: 1rem;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid var(--accent-color);
+  background: var(--secondary-color);
+  border-radius: 0 8px 8px 0;
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.sections-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.policy-card {
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  background: var(--card-bg);
+  transition: border-color 0.3s ease;
+}
+
+.policy-card:hover {
+  border-color: var(--primary-color);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.section-number {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  background: var(--secondary-color);
+  border: 1px solid var(--border-color);
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+}
+
+.section-header h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0;
+}
+
+.sub-section {
+  margin-top: 1.25rem;
+}
+
+.sub-section h3 {
+  font-size: 1.15rem;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.policy-list,
+.sub-section ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.policy-list li,
+.sub-section ul li {
+  line-height: 1.6;
+}
+
+code {
+  font-family: monospace;
+  background: var(--secondary-color);
+  color: var(--accent-color);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  font-size: 0.9em;
+}
+
+.inline-link {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.inline-link:hover {
+  color: var(--accent-color);
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1.25rem;
+  background: var(--secondary-color);
+  padding: 1.25rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.contact-item {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.contact-item .label {
+  font-weight: 600;
+  color: var(--primary-color);
+  min-width: 120px;
+}
+
+@media screen and (max-width: 768px) {
+  .privacy-container {
+    padding: 2rem 1rem;
+  }
+
+  .header-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .meta-badges {
+    align-items: flex-start;
+  }
+
+  .promise-card {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .policy-card {
+    padding: 1.5rem;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+}
